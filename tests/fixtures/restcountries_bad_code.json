@@ -1,0 +1,23 @@
+{
+  "case": "restcountries_bad_code",
+  "note": "Malformed country code: expect a 400 or 404. Trust what you actually see.",
+  "request": {
+    "url": "https://restcountries.com/v3.1/alpha/ZZZZZZZZ",
+    "params": {
+      "fields": "name,capital,region,subregion,population,currencies,languages,cca2,cca3"
+    }
+  },
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "success": false,
+    "data": null,
+    "errors": [
+      {
+        "message": "This API version has been deprecated. Please visit https://restcountries.com/docs/countries/legacy-api-deprecation to migrate to our new version (v5)."
+      }
+    ]
+  }
+}

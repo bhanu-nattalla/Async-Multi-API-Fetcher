@@ -1,0 +1,23 @@
+{
+  "case": "openfda_no_results",
+  "note": "Nonsense drug: HTTP 404 NOT_FOUND. A valid query with zero results, not a network failure.",
+  "request": {
+    "url": "https://api.fda.gov/drug/event.json",
+    "params": {
+      "search": "patient.drug.medicinalproduct:\"zzzznotarealdrug123\"",
+      "count": "patient.reaction.reactionmeddrapt.exact",
+      "limit": 5
+    },
+    "auth": "none"
+  },
+  "status_code": 404,
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "error": {
+      "code": "NOT_FOUND",
+      "message": "No matches found!"
+    }
+  }
+}

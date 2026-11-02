@@ -1,0 +1,22 @@
+{
+  "case": "restcountries_legacy_v3",
+  "note": "Deprecated v3.1: returns HTTP 200 with success=false. Great fixture for 'status code lied'.",
+  "request": {
+    "url": "https://restcountries.com/v3.1/name/india",
+    "params": {},
+    "auth": "none"
+  },
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "success": false,
+    "data": null,
+    "errors": [
+      {
+        "message": "This API version has been deprecated. Please visit https://restcountries.com/docs/countries/legacy-api-deprecation to migrate to our new version (v5)."
+      }
+    ]
+  }
+}

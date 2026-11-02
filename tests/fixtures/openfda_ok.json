@@ -1,0 +1,47 @@
+{
+  "case": "openfda_ok",
+  "note": "Happy path: {'meta': ..., 'results': [{'term': ..., 'count': ...}]}.",
+  "request": {
+    "url": "https://api.fda.gov/drug/event.json",
+    "params": {
+      "search": "patient.drug.medicinalproduct:\"aspirin\"",
+      "count": "patient.reaction.reactionmeddrapt.exact",
+      "limit": 5
+    },
+    "auth": "none"
+  },
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "meta": {
+      "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+      "terms": "https://open.fda.gov/terms/",
+      "license": "https://open.fda.gov/license/",
+      "last_updated": "2026-07-30"
+    },
+    "results": [
+      {
+        "term": "FATIGUE",
+        "count": 38671
+      },
+      {
+        "term": "DYSPNOEA",
+        "count": 32333
+      },
+      {
+        "term": "NAUSEA",
+        "count": 31917
+      },
+      {
+        "term": "DIARRHOEA",
+        "count": 31781
+      },
+      {
+        "term": "DRUG INEFFECTIVE",
+        "count": 27125
+      }
+    ]
+  }
+}

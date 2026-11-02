@@ -1,0 +1,24 @@
+{
+  "case": "restcountries_ok",
+  "note": "Happy path. Note the top level is a LIST, even for one country.",
+  "request": {
+    "url": "https://restcountries.com/v3.1/name/india",
+    "params": {
+      "fullText": "true",
+      "fields": "name,capital,region,subregion,population,currencies,languages,cca2,cca3"
+    }
+  },
+  "status_code": 200,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "success": false,
+    "data": null,
+    "errors": [
+      {
+        "message": "This API version has been deprecated. Please visit https://restcountries.com/docs/countries/legacy-api-deprecation to migrate to our new version (v5)."
+      }
+    ]
+  }
+}

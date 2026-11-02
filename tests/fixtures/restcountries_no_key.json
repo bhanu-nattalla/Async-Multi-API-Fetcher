@@ -1,0 +1,25 @@
+{
+  "case": "restcountries_no_key",
+  "note": "No Authorization header at all.",
+  "request": {
+    "url": "https://api.restcountries.com/countries/v5",
+    "params": {
+      "q": "canada",
+      "limit": 1,
+      "response_fields": "names.common"
+    },
+    "auth": "none"
+  },
+  "status_code": 401,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "errors": [
+      {
+        "message": "Authorization key required.",
+        "code": "authKeyMissing"
+      }
+    ]
+  }
+}

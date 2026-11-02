@@ -1,0 +1,21 @@
+{
+  "case": "open_meteo_bad_coords",
+  "note": "Invalid latitude: HTTP 400 with {'error': true, 'reason': ...}.",
+  "request": {
+    "url": "https://api.open-meteo.com/v1/forecast",
+    "params": {
+      "latitude": 999,
+      "longitude": -0.1276,
+      "current": "temperature_2m,wind_speed_10m"
+    },
+    "auth": "none"
+  },
+  "status_code": 400,
+  "headers": {
+    "content-type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "reason": "Latitude must be in range of -90 to 90°. Given: 999.0.",
+    "error": true
+  }
+}
